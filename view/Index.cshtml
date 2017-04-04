@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<html>
+<head>
+    <script src="~/content/script/JavaScript1.js"></script>
+
+    <title></title>
+</head>
+<body>
+@{using(Html.BeginForm("Index", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+  {
+    <table width="100%" cellspacing="3">
+        <tr><td><label>name</label><input type="text"  name="X_nme"/></td></tr>
+       <tr><td><input type="file" name="Prop" id="PIC" /></td></tr>
+        <tr><td><input type="radio" value="male"  name="M"/><label>male</label><input type="radio" name="M" value="Female" /><label>Female</label></td></tr>
+        <tr><td><label>Email</label><input type="text"  name="Mail"/></td></tr>
+        <tr><td><label>Adress<input type="text" name="Add" /></label></td></tr>
+        <tr><td><select name="location"><option>india</option></select></td></tr>
+        <tr><td><label>Hobbies</label><input type="checkbox"  name="R"value="Reading"/><label>Reading</label></td></tr><br />
+        <tr><td><input type="checkbox" name="R" value="writing" /><label>Writing</label></td></tr><br />
+        <tr><td><input type="checkbox" name="R" value="playing"/><label>Playing</label></td></tr>
+        <tr><td><label>Passworde</label><input type="password"  name="Psw"/></td></tr>
+        <tr><td><input type="submit" value="Save" name="cmd" /></td></tr>
+    </table>
+  
+ }}
+</body>
+  
+</html>
